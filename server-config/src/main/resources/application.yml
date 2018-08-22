@@ -1,0 +1,27 @@
+server:
+  port: 8902
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/shaorensheng/configcenter.git
+          default-label: master
+          username: shaorensheng
+          password: sheng0903
+  profiles:
+    active: local
+
+
+---
+#本地环境
+spring:
+  profiles: local
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8901/eureka/

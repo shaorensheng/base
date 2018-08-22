@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eureka
+
+server:
+  port: 8901
+eureka:
+  client:
+    registerWithEureka: false #声明是否将自己的信息注册到Eureka服务器，默认为true
+    fetchRegistry: false #是否到Eureka服务器中抓取注册信息
+  server:
+      waitTimeInMsWhenSyncEmpty: 0
+      enableSelfPreservation: false   # 关闭自我保护模式（缺省为打开）
+      eviction-interval-timer-in-ms: 5000   # 续期时间，即扫描失效服务的间隔时间（缺省为60*1000ms）
+
+
+
