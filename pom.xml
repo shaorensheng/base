@@ -25,9 +25,10 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.SR1</spring-cloud.version>
+        <lombok.version>1.16.20</lombok.version>
     </properties>
 
-    <!-- 所有module的公共依赖-->
+    <!-- 所有module的公共依赖管理-->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -39,6 +40,15 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <!-- 公共依赖 -->
+    <dependencies>
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 
     <modules>
         <module>server-eureka</module>
