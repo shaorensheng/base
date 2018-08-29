@@ -8,6 +8,8 @@ eureka:
   client:
     registerWithEureka: false #声明是否将自己的信息注册到Eureka服务器，默认为true
     fetchRegistry: false #是否到Eureka服务器中抓取注册信息
+    serverUrl:
+      defaultZone: http://140.143.56.233:8901/eureka/
   server:
       waitTimeInMsWhenSyncEmpty: 0
       enableSelfPreservation: false   # 关闭自我保护模式（缺省为打开）
